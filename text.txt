@@ -1,0 +1,67 @@
+a favicon is a fav icon which will be displayed in the top bar of our website.
+to create a favicon, we can go to favicon.cc
+
+one professional tip is using the chrome development tools and seeing those changes implementing them in our own code like we did for the margins in div to get it a seamless look in the styles.css
+
+display tag can have 4 options:
+inline
+block
+inline-block 
+none
+
+inline is basically having that much amount of space as required and can be present inside the 
+
+block elements take the whole width of the screen by default h1, p, div, lists, forms are block elements
+
+now suppose there is a text "a programmer", and we want to underline only the pro of the entire word
+to do that we can use inline elements
+like 
+<p>a <span>pro</span>grammer</p>
+and now inside the css file
+span{
+    text-decoration: underline;
+}
+this would have done the job
+
+here span, img, a are all inline elements they take as much width as they require
+
+now the difference between inline and block is that we can change the width of the block elements but not of the inline elements.
+
+to change the display property of any inline or block elements is:
+in the css
+display: inline/block/inline-block/none
+
+none will remove that property as if it did not exist, on the other hand there is something called as visiblity which is similar to none but it will not remove the property but instead, it will keep its position intact, 
+visiblity: hidden;
+
+CSS positioning
+
+in css positioning, we have relative positioning which means how much to move the object relative to the direction,
+ie if we say left: 200px, it means it would move to the right relative of its position by 200px
+its like adding a margin relative to to its original position
+now to change it to relative, we need to write position:relative; in the css file which originally is static
+note: in relative positioning, only the element changes its position, and the others just get overlapped if they get in the way.
+
+
+the next method is absolute positioning, in this positioning method, we are changing the position of the element relative to the parent can be the screen, a div etc.
+it is very useful for fine tuning the position.
+
+next up is the fixed positioning, ie no matter of scrolling, our element will always maintain that position,
+can be useful in case of a fixed navigation bar.
+
+
+DARK ART OF CENTERING:
+we can center the elements either by stating inside the body: text-align: center; which will align all the elements in the center IF they dont have their width stated.
+if the width is mentioned like width:10%; we need to give a margin in the element--> margin: 0 auto 0 auto; which basically aligns horizontally,
+0 for top and bottom and auto for left and right.
+
+
+em is the dynamic font size 
+1 em = 16px = 100%
+rem is better than em as it will not inherit the scaling of the parent element
+
+suppose in the web development image we want the text to wrap around the img, what we can do is to change the float property to left
+float:left;
+now suppose to make a paragraph not appear in float, what we can do is to use the clear property
+it is like an anti-float
+clear:left;
